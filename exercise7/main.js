@@ -13,6 +13,4 @@ button.addEventListener('click',function () {
             }
         }
     }
-
-
 })
