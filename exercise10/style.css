@@ -1,0 +1,34 @@
+.slide{
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.slide ul{
+    position: relative;
+    padding:0;
+    margin:0;
+}
+
+.slide ul li{
+    position: absolute;
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+
+.slide ul li img{
+    width: 100%;
+}
+.slide .btn-prev{
+   position: absolute;
+    top:50%;
+    color:white;
+}
+
+.slide .btn-next{
+    position: absolute;
+    top:50%;
+    right:0;
+    color: white;
+}
