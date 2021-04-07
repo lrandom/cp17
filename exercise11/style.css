@@ -1,0 +1,29 @@
+.wrapper {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.wrapper .score{
+    text-align: center;
+    font-size: 30px;
+}
+
+.wrapper .question{
+    font-size: 26px;
+}
+
+.wrapper .answers .answer{
+    float:left;
+    width:45%;
+    text-align: center;
+    border:1px dashed #cdcdcd;
+    box-sizing: border-box;
+    margin:10px;
+    padding:20px;
+    cursor: pointer;
+}
+
+.wrapper .answers .answer:hover{
+    background: coral;
+    color: white;
+}
