@@ -1,4 +1,4 @@
-const arr = [
+let arr = [
     {
         brand: 'Huyndai',
         model:'Santafe'
@@ -24,29 +24,30 @@ const arr = [
      ["Camry","Vios"]
   ]*/
 //mang trong js là mảng động
-let group =[];
-
-let index = 0;
+let group =[]
 while(arr.length>0) {
-    index++;
-    let temp = [arr[0]];
-    let removeIndex = [0];
+    let clone =arr[0];
+    delete arr[0];
+    let temp = [clone];
     for (let j = 1; j < arr.length; j++) {
-        if (temp[0].brand == arr[j].brand) {
-            temp.push(arr[j]);
-            removeIndex.push(j);
+        if (clone.brand == arr[j].brand) {
+            let clone = arr[j];
+            temp.push(clone);
+            delete arr[j];
         }
     }
 
-    //console.log("Lần"+index);
-    //console.log(removeIndex);
     group.push(temp);
-    for (let j = 0; j < removeIndex.length; j++) {
-        arr.splice(removeIndex[j], 1);
+    let tfArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]!=undefined) {
+            tfArr.push(arr[i])
+        }
     }
-    console.log(arr);
-}
 
+    console.log(arr);
+    arr = tfArr;
+}
 
 console.log(group);
 
